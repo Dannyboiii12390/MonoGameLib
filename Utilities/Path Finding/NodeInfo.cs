@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MonoGameLib.Utilities;
 
-namespace MonoGameLib.Utilities.Path_Finding.Dijkstras
+
+namespace MonoGameLib
 {
     public class NodeInfo : IComparable<NodeInfo>
     {

@@ -10,3 +10,15 @@ C:\Users\Daniel Howe\Source\Repos\Game\MonoGameLib\obj\Debug\net6.0\MonoGameLib.
 C:\Users\Daniel Howe\Source\Repos\Game\MonoGameLib\obj\Debug\net6.0\refint\MonoGameLib.dll
 C:\Users\Daniel Howe\Source\Repos\Game\MonoGameLib\obj\Debug\net6.0\MonoGameLib.pdb
 C:\Users\Daniel Howe\Source\Repos\Game\MonoGameLib\obj\Debug\net6.0\ref\MonoGameLib.dll
+C:\Users\Daniel Howe\Downloads\MonoGameLib\bin\Debug\net6.0\MonoGameLib.deps.json
+C:\Users\Daniel Howe\Downloads\MonoGameLib\bin\Debug\net6.0\MonoGameLib.dll
+C:\Users\Daniel Howe\Downloads\MonoGameLib\bin\Debug\net6.0\MonoGameLib.pdb
+C:\Users\Daniel Howe\Downloads\MonoGameLib\obj\Debug\net6.0\MonoGameLib.csproj.AssemblyReference.cache
+C:\Users\Daniel Howe\Downloads\MonoGameLib\obj\Debug\net6.0\MonoGameLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Daniel Howe\Downloads\MonoGameLib\obj\Debug\net6.0\MonoGameLib.AssemblyInfoInputs.cache
+C:\Users\Daniel Howe\Downloads\MonoGameLib\obj\Debug\net6.0\MonoGameLib.AssemblyInfo.cs
+C:\Users\Daniel Howe\Downloads\MonoGameLib\obj\Debug\net6.0\MonoGameLib.csproj.CoreCompileInputs.cache
+C:\Users\Daniel Howe\Downloads\MonoGameLib\obj\Debug\net6.0\MonoGameLib.dll
+C:\Users\Daniel Howe\Downloads\MonoGameLib\obj\Debug\net6.0\refint\MonoGameLib.dll
+C:\Users\Daniel Howe\Downloads\MonoGameLib\obj\Debug\net6.0\MonoGameLib.pdb
+C:\Users\Daniel Howe\Downloads\MonoGameLib\obj\Debug\net6.0\ref\MonoGameLib.dll

@@ -1,4 +1,4 @@
-﻿using ai_for_games_lab_week_1;
+﻿
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MonoGameLib.Shapes
+namespace MonoGameLib
 {   
 
     public abstract class Shape
@@ -15,15 +15,15 @@ namespace MonoGameLib.Shapes
         
         public Vector2 Position { get; protected set; }
         public Vector2 Velocity { get; protected set; }
-        public ref ShapeBatcher Batcher => ref Batcher;
+        //public ShapeBatcher Batcher { get; protected set; }
         public Color Colour { get; protected set; }
         
 
-        public Shape(Vector2 pPosition, Color pColour, ref ShapeBatcher pBatcher)
+        public Shape(Vector2 pPosition, Color pColour)
         {
             Position = pPosition;
             Colour = pColour;
-            Batcher = pBatcher;
+            
             
 
         }
@@ -54,7 +54,7 @@ namespace MonoGameLib.Shapes
 
             return len;
         }
-        public virtual void Draw()
+        public virtual void Draw(ShapeBatcher Batcher)
         {
             Batcher.Draw(this);
         }

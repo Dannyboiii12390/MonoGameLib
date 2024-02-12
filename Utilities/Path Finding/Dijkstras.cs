@@ -5,7 +5,7 @@ using System.Runtime.ExceptionServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MonoGameLib.Utilities.Path_Finding.Dijkstras
+namespace MonoGameLib
 {
     public class Dijkstra<T>
     {

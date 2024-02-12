@@ -1,12 +1,11 @@
 ﻿using Microsoft.Xna.Framework;
-using MonoGameLib.Shapes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MonoGameLib.Items
+namespace MonoGameLib
 {
     
 
@@ -19,7 +18,7 @@ namespace MonoGameLib.Items
         private Color colour;
         
 
-        public HealthBar(Vector2 pPosition, Vector2 pEnd, Color pColour, int pThickness = 10)
+        public HealthBar(Vector2 pPosition, Vector2 pEnd, Color pColour, ref ShapeBatcher pBatcher, int pThickness = 10)
         {
             this.Position = pPosition;
             this.End = pEnd;

@@ -1,4 +1,4 @@
-﻿using ai_for_games_lab_week_1;
+﻿
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
@@ -6,14 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MonoGameLib.Shapes
+namespace MonoGameLib
 {
     public class Triangle : Shape
     {
         public Vector2 Position2 { get; private set; }
         public Vector2 Position3 { get; private set; }
 
-        public Triangle(Vector2 pPosition, Vector2 p2, Vector2 p3, Color pColour, ref ShapeBatcher pBatcher) : base(pPosition, pColour, ref pBatcher)
+        public Triangle(Vector2 pPosition, Vector2 p2, Vector2 p3, Color pColour) : base(pPosition, pColour)
         {
             Position2 = p2;
             Position3 = p3;

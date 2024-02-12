@@ -9,9 +9,8 @@ using MonoGameLib;
 using Microsoft.Xna.Framework.Graphics;
 using Color = Microsoft.Xna.Framework.Color;
 using ImGuiNET;
-using MonoGameLib.Shapes;
 
-namespace ai_for_games_lab_week_1
+namespace MonoGameLib
 {
     internal static class ShapebatcherHelpers
     {
@@ -62,17 +61,17 @@ namespace ai_for_games_lab_week_1
             shapeBatcher.DrawLine(line.Position, line.end, line.thickness, line.Colour);
             shapeBatcher.End();
         }
-        private static void HelperDrawTriangle(this ShapeBatcher shapeBatcher, MonoGameLib.Shapes.Triangle triangle)
+        private static void HelperDrawTriangle(this ShapeBatcher shapeBatcher, Triangle triangle)
         {
             shapeBatcher.Begin();
-            shapeBatcher.DrawLine(triangle.Position, triangle.Position2, 2, triangle.Colour);
-            shapeBatcher.DrawLine(triangle.Position2, triangle.Position3, 2, triangle.Colour);
-            shapeBatcher.DrawLine(triangle.Position, triangle.Position3, 2, triangle.Colour);
+            shapeBatcher.DrawTriangle(triangle.Position, triangle.Position2, triangle.Position3, triangle.Colour);
+            shapeBatcher.DrawTriangle(triangle.Position2, triangle.Position3, triangle.Position, triangle.Colour);
+            shapeBatcher.DrawTriangle(triangle.Position, triangle.Position3, triangle.Position3, triangle.Colour);
             shapeBatcher.End();
 
         }
 
-        private static void HelperDrawPolygon(this ShapeBatcher shapeBatcher, MonoGameLib.Shapes.Polygon polygon)
+        private static void HelperDrawPolygon(this ShapeBatcher shapeBatcher, Polygon polygon)
         {
             shapeBatcher.Begin();
             foreach(Triangle triangle in polygon.triangles)

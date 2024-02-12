@@ -1,5 +1,5 @@
 ﻿
-using ai_for_games_lab_week_1;
+
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -8,14 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MonoGameLib.Shapes
+namespace MonoGameLib
 {
     public class Text : Shape 
     {
         public string text { get; private set; }
         //public SpriteFont font { get; private set; }
         public Vector2 position { get; private set; }
-        public Text (string pText, Vector2 pPosition, Color pColour, ref ShapeBatcher pBatcher) : base(pPosition , pColour, ref pBatcher)
+        public Text (string pText, Vector2 pPosition, Color pColour) : base(pPosition , pColour)
         {
             text = pText;
             
@@ -26,7 +26,7 @@ namespace MonoGameLib.Shapes
         {
             throw new NotImplementedException();
         }
-        public override void Draw()
+        public override void Draw(ShapeBatcher Batcher)
         {
             throw new NotSupportedException();
         }

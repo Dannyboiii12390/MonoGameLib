@@ -1,13 +1,11 @@
 ﻿
-
-using ai_for_games_lab_week_1;
 using Microsoft.Xna.Framework;
 using System;
 using System.Runtime.CompilerServices;
 using System.Threading;
 
 
-namespace MonoGameLib.Shapes
+namespace MonoGameLib
 {
     public class Circle : Shape
     {
@@ -18,7 +16,7 @@ namespace MonoGameLib.Shapes
 
 
    
-        public Circle(Vector2 position, float radius, Color pColour, ref ShapeBatcher pBatcher) : base(position, pColour, ref pBatcher)
+        public Circle(Vector2 position, float radius, Color pColour) : base(position, pColour)
         {
             Radius = radius;
         }

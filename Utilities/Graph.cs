@@ -6,7 +6,7 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MonoGameLib.Utilities
+namespace MonoGameLib
 {
     public class Graph<T>
     {

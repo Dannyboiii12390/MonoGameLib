@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace MonoGameLib
 {
-    internal class SpriteBatcherHelpers
+    public class Ref<T> where T : struct
     {
-        
+        public T Value { get; set; }
+
     }
 }
