@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework.Graphics;
+using ai_for_games_lab_week_1;
 
 namespace MonoGameLib.Shapes
 {
@@ -13,11 +14,11 @@ namespace MonoGameLib.Shapes
         public  List<Triangle> triangles { get; private set; } = new List<Triangle>();
 
 
-        public Polygon(Vector2 pPosition, List<Vector2> point,Color pColour) : base(pPosition, pColour)
+        public Polygon(Vector2 pPosition, List<Vector2> point,Color pColour, ref ShapeBatcher pBatcher) : base(pPosition, pColour, ref pBatcher)
         {
             for (int i =2; i < point.Count; i++)
             {
-                triangles.Add(new Triangle(point[i - 2], point[i-1], point[i], pColour));
+                triangles.Add(new Triangle(point[i - 2], point[i-1], point[i], pColour, ref pBatcher));
             }
         }
 
@@ -31,6 +32,5 @@ namespace MonoGameLib.Shapes
 
         }
 
-        
     }
 }

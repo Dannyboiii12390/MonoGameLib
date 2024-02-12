@@ -1,8 +1,8 @@
-﻿using Microsoft.Xna.Framework;
+﻿using ai_for_games_lab_week_1;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,80 +13,52 @@ namespace MonoGameLib.Shapes
     public abstract class Shape
     {
         
-        public Vector2 _position { get; protected set; }
-        public Vector2 _velocity { get; protected set; }
-
-
-
-        protected float coefficientOfSpeed = 0.015f;
-        public Microsoft.Xna.Framework.Color _colour { get; protected set; }
+        public Vector2 Position { get; protected set; }
+        public Vector2 Velocity { get; protected set; }
+        public ref ShapeBatcher Batcher => ref Batcher;
+        public Color Colour { get; protected set; }
         
 
-        public Shape(Vector2 pPosition, Microsoft.Xna.Framework.Color pColour)
+        public Shape(Vector2 pPosition, Color pColour, ref ShapeBatcher pBatcher)
         {
-            _position = pPosition;
-            _colour = pColour;
-            
+            Position = pPosition;
+            Colour = pColour;
+            Batcher = pBatcher;
             
 
         }
         public abstract bool isInside(Vector2 pPosition);
 
-        public void changeColour(Microsoft.Xna.Framework.Color c)
+        public void changeColour(Color c)
         {
-            _colour = c;
+            Colour = c;
         }
         public override string ToString()
         {
-            return $"Shape with position {_position.ToString()}";
+            return $"Shape with position {Position.ToString()}";
         }
         public void changePosition(Vector2 pPos)
         {
-            _position = pPos;
+            Position = pPos;
         }
 
         public void changeVelocity(Vector2 v)
         {
-            _velocity = v;
+            Velocity = v;
         }
 
-        public virtual void updateVel(Vector2 pTarget)
+        private float LengthBetween(Vector2 pTarget)
         {
-
-
-            //difference
-            Vector2 v = _position - pTarget;
-
-            //normalise
-            v = Vector2.Normalize(v);
-
-            //multiply by length between
-
-            
-            _velocity = v * getLengthBetween(pTarget) * coefficientOfSpeed;
-           
-            
-        }
-        
-        private float getLengthBetween(Vector2 pTarget)
-        {
-            Vector2 delV = _position - pTarget;
+            Vector2 delV = Position - pTarget;
             float len = delV.Length();
 
             return len;
         }
-        public virtual void seek()
+        public virtual void Draw()
         {
-            
-            _position = _position - _velocity;
-            
+            Batcher.Draw(this);
         }
-        
-
-
-
-        
-        
+    
     }
 
     

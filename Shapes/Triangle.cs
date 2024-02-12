@@ -1,7 +1,7 @@
-﻿using Microsoft.Xna.Framework;
+﻿using ai_for_games_lab_week_1;
+using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,31 +10,30 @@ namespace MonoGameLib.Shapes
 {
     public class Triangle : Shape
     {
-        public Vector2 _position2 { get; private set; }
-        public Vector2 _position3 { get; private set; }
+        public Vector2 Position2 { get; private set; }
+        public Vector2 Position3 { get; private set; }
 
-        public Triangle(Vector2 pPosition, Vector2 p2, Vector2 p3, Microsoft.Xna.Framework.Color pColour) : base(pPosition, pColour)
+        public Triangle(Vector2 pPosition, Vector2 p2, Vector2 p3, Color pColour, ref ShapeBatcher pBatcher) : base(pPosition, pColour, ref pBatcher)
         {
-            _position2 = p2;
-            _position3 = p3;
+            Position2 = p2;
+            Position3 = p3;
 
         }
 
         public override bool isInside(Vector2 point)
         {
-            float Px = point.X - _position.X,
-            Py = point.Y - _position.Y,
-            V1x = _position2.X - _position.X,
-            V1y = _position2.Y - _position.Y,
-            V2x = _position3.X - _position.X,
-            V2y = _position3.Y - _position.Y;
+            float Px = point.X - Position.X,
+            Py = point.Y - Position.Y,
+            V1x = Position2.X - Position.X,
+            V1y = Position2.Y - Position.Y,
+            V2x = Position3.X - Position.X,
+            V2y = Position3.Y - Position.Y;
 
             float n = (Py * V1x - Px * V1y) / (V2y * V1x - V2x * V1y);
             float m = (Px - n * V2x) / V1x;
 
             return m >= 0 && m <= 1 && n >= 0 && n <= 1 && m + n <= 1;
         }
-
-        
+ 
     }
 }

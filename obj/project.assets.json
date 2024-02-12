@@ -290,11 +290,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Daniel Howe\\Source\\Repos\\Game\\MonoGameLib\\MonoGameLib.csproj",
+      "projectUniqueName": "C:\\Users\\Daniel Howe\\Downloads\\MonoGameLib\\MonoGameLib.csproj",
       "projectName": "MonoGameLib",
-      "projectPath": "C:\\Users\\Daniel Howe\\Source\\Repos\\Game\\MonoGameLib\\MonoGameLib.csproj",
+      "projectPath": "C:\\Users\\Daniel Howe\\Downloads\\MonoGameLib\\MonoGameLib.csproj",
       "packagesPath": "C:\\Users\\Daniel Howe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Daniel Howe\\Source\\Repos\\Game\\MonoGameLib\\obj\\",
+      "outputPath": "C:\\Users\\Daniel Howe\\Downloads\\MonoGameLib\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

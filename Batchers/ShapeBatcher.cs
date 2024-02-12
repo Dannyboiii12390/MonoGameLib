@@ -19,7 +19,7 @@ namespace ai_for_games_lab_week_1
     * */
 
 
-            private MyGame _game;
+            private Game _game;
 
             private bool _disposed;
             private BasicEffect _effect;
@@ -35,7 +35,7 @@ namespace ai_for_games_lab_week_1
             public static readonly float MIN_LINE_THICKNESS = 2f;
             public static readonly float MAX_LINE_THICKNESS = 10f;
 
-            public ShapeBatcher(MyGame pGame)
+            public ShapeBatcher(Game pGame)
             {
                 _game = pGame ?? throw new ArgumentNullException(nameof(pGame));
                 _disposed = false;

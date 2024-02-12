@@ -1,4 +1,5 @@
 ﻿
+using ai_for_games_lab_week_1;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace MonoGameLib.Shapes
         public int thickness{ get; private set; }
         
 
-        public Line(Vector2 pPosition, Vector2 pEnd, Color pColour, int pThickness) : base(pPosition, pColour)
+        public Line(Vector2 pPosition, Vector2 pEnd, Color pColour, int pThickness, ref ShapeBatcher pBatcher) : base(pPosition, pColour, ref pBatcher)
         {
             end = pEnd;
             thickness = pThickness;
@@ -30,7 +31,10 @@ namespace MonoGameLib.Shapes
         {
             end = v;
         }
+        public override void Draw()
+        {
+            Batcher.Draw(this);
+        }
 
-        
     }
 }

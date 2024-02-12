@@ -45,29 +45,29 @@ namespace ai_for_games_lab_week_1
         private static void HelperDraw(this ShapeBatcher shapeBatcher, Circle circle)
         {
             shapeBatcher.Begin();
-            shapeBatcher.DrawCircle(circle._position, circle._radius, circle.numVertices, circle.thickness, circle._colour);
+            shapeBatcher.DrawCircle(circle.Position, circle.Radius, circle.numVertices, circle.thickness, circle.Colour);
             shapeBatcher.End();
         }
 
         public static void HelperDrawArrow(this ShapeBatcher shapeBatcher, Circle circle)
         {
             shapeBatcher.Begin();
-            shapeBatcher.DrawArrow(circle.position, circle._velocity, 2, 10, circle._colour);
+            shapeBatcher.DrawArrow(circle.Position, circle.Velocity, 2, 10, circle.Colour);
             shapeBatcher.End();
         }
 
         private static void HelperDrawLine(this ShapeBatcher shapeBatcher, Line line)
         {
             shapeBatcher.Begin();
-            shapeBatcher.DrawLine(line._position, line.end, line.thickness, line._colour);
+            shapeBatcher.DrawLine(line.Position, line.end, line.thickness, line.Colour);
             shapeBatcher.End();
         }
         private static void HelperDrawTriangle(this ShapeBatcher shapeBatcher, MonoGameLib.Shapes.Triangle triangle)
         {
             shapeBatcher.Begin();
-            shapeBatcher.DrawLine(triangle._position, triangle._position2, 2, triangle._colour);
-            shapeBatcher.DrawLine(triangle._position2, triangle._position3, 2, triangle._colour);
-            shapeBatcher.DrawLine(triangle._position, triangle._position3, 2, triangle._colour);
+            shapeBatcher.DrawLine(triangle.Position, triangle.Position2, 2, triangle.Colour);
+            shapeBatcher.DrawLine(triangle.Position2, triangle.Position3, 2, triangle.Colour);
+            shapeBatcher.DrawLine(triangle.Position, triangle.Position3, 2, triangle.Colour);
             shapeBatcher.End();
 
         }
@@ -78,9 +78,9 @@ namespace ai_for_games_lab_week_1
             foreach(Triangle triangle in polygon.triangles)
             {
                 
-                shapeBatcher.DrawLine(triangle._position, triangle._position2, 2, polygon._colour);
-                shapeBatcher.DrawLine(triangle._position2, triangle._position3, 2, polygon._colour);
-                shapeBatcher.DrawLine(triangle._position3, triangle._position, 2, polygon._colour);
+                shapeBatcher.DrawLine(triangle.Position, triangle.Position2, 2, polygon.Colour);
+                shapeBatcher.DrawLine(triangle.Position2, triangle.Position3, 2, polygon.Colour);
+                shapeBatcher.DrawLine(triangle.Position3, triangle.Position, 2, polygon.Colour);
                 
             }
             shapeBatcher.End();

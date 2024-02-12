@@ -1,4 +1,5 @@
 ﻿
+using ai_for_games_lab_week_1;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -14,7 +15,7 @@ namespace MonoGameLib.Shapes
         public string text { get; private set; }
         //public SpriteFont font { get; private set; }
         public Vector2 position { get; private set; }
-        public Text (string pText, Vector2 pPosition, Color pColour) : base(pPosition , pColour)
+        public Text (string pText, Vector2 pPosition, Color pColour, ref ShapeBatcher pBatcher) : base(pPosition , pColour, ref pBatcher)
         {
             text = pText;
             
@@ -25,7 +26,11 @@ namespace MonoGameLib.Shapes
         {
             throw new NotImplementedException();
         }
+        public override void Draw()
+        {
+            throw new NotSupportedException();
+        }
 
-        
+
     }
 }
